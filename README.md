@@ -1,6 +1,6 @@
 # kwest-text
 
-Fext fetching plugin for the [kwest](https://github.com/Janpot/kwest) module
+Text fetching plugin for the [kwest](https://github.com/Janpot/kwest) module
 
 ## Installation
 
