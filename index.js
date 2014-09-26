@@ -29,8 +29,6 @@ function detectEncoding(headers, body) {
 
 function kwestText(request) {
   return request.wrap(function (makeRequest, options) {
-    options.headers['accept-encoding'] = 'gzip';
-
     return makeRequest(options)
       .then(function (response) {
         var body        = response.body,
