@@ -1,6 +1,6 @@
 {
   "name": "kwest-text",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "detect and convert encoding",
   "main": "index.js",
   "scripts": {
