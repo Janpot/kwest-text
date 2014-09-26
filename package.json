@@ -1,0 +1,30 @@
+{
+  "name": "kwest-text",
+  "version": "0.0.1",
+  "description": "detect and convert encoding",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "kwest",
+    "gzip"
+  ],
+  "author": "Jan Potoms",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^2.3.2",
+    "charset": "^1.0.0",
+    "iconv-lite": "^0.4.4",
+    "jschardet": "^1.1.0"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "kwest": "0.0.1",
+    "mocha": "^1.21.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Janpot/kwest-text.git"
+  }
+}
