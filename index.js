@@ -27,9 +27,9 @@ function detectEncoding(headers, body) {
   return null;
 }
 
-function kwestText(request) {
-  return request.wrap(function (makeRequest, options) {
-    return makeRequest(options)
+function kwestText(kwest) {
+  return kwest.wrap(function (makeRequest, request) {
+    return makeRequest(request)
       .then(function (response) {
         var body        = response.body,
             detectedEnc = detectEncoding(response.headers, body),
