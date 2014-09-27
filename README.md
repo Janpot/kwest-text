@@ -1,6 +1,6 @@
 # kwest-text [![Build Status][travis-image]][travis-url] [![Dependency Status][depstat-image]][depstat-url]
 
-Text fetching plugin for the [kwest](https://github.com/Janpot/kwest) module
+Text fetching middleware for the [kwest](https://github.com/Janpot/kwest) module.
 
 ## Installation
 
@@ -11,8 +11,8 @@ Text fetching plugin for the [kwest](https://github.com/Janpot/kwest) module
 
 ```js
 var kwestText = require('kwest-text'),
-    kwest = require('kwest'),
-    request = kwestText(kwest);
+    kwest     = require('kwest-base'),
+    request   = kwest.wrap(kwestText());
 
 // requests text
 request('http://www.example.com/some-encoded-text')

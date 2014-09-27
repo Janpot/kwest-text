@@ -1,6 +1,6 @@
 var kwestText = require('..'),
     Promise   = require('bluebird'),
-    kwest     = require('kwest'),
+    kwest     = require('kwest-base'),
     iconv     = require('iconv-lite'),
     assert    = require('chai').assert;
 
@@ -17,7 +17,7 @@ describe('kwest-text', function () {
       });
     });
 
-    var textRequest = kwestText(kwestMock);
+    var textRequest = kwestMock.wrap(kwestText());
     textRequest('http://www.example.com')
       .then(function (res) {
         assert.deepPropertyVal(res, 'body', '¤');

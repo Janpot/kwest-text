@@ -1,11 +1,11 @@
 'use strict';
 
-var Promise = require('bluebird'),
-    zlib    = require('zlib'),
+var Promise   = require('bluebird'),
+    zlib      = require('zlib'),
     charset   = require('charset'),
     jschardet = require('jschardet'),
     iconv     = require('iconv-lite'),
-    gunzip  = Promise.promisify(zlib.gunzip);
+    gunzip    = Promise.promisify(zlib.gunzip);
 
 
 
@@ -28,8 +28,8 @@ function detectEncoding(headers, body) {
 }
 
 function kwestText(kwest) {
-  return kwest.wrap(function (makeRequest, request) {
-    return makeRequest(request)
+  return function (request, next) {
+    return next(request)
       .then(function (response) {
         var body        = response.body,
             detectedEnc = detectEncoding(response.headers, body),
@@ -49,7 +49,7 @@ function kwestText(kwest) {
         
         return response;
       });
-  });
+  };
 }
 
 module.exports = kwestText;

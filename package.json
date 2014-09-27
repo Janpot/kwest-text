@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "chai": "^1.9.1",
-    "kwest": "0.0.1",
+    "kwest-base": "0.0.1",
     "mocha": "^1.21.4"
   },
   "repository": {
